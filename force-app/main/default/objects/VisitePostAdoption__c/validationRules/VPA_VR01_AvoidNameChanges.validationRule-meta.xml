@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VPA_VR01_AvoidNameChanges</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+				 ISCHANGED(Name) ,
+				 $Profile.Name  == &apos;Delegue Enqueteur SPA&apos;
+				)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Vous n&apos;avez pas les droits nécessaires pour modifier le numéro</errorMessage>
+</ValidationRule>

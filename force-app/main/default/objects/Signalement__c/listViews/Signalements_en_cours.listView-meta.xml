@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signalements_en_cours</fullName>
+    <columns>NumeroCTS__c</columns>
+    <columns>NAME</columns>
+    <columns>DateSignalement__c</columns>
+    <columns>Adresse__c</columns>
+    <columns>Ville__c</columns>
+    <columns>NOMPrenomMEC__c</columns>
+    <columns>Especes__c</columns>
+    <columns>Commentaire__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Issue__c</field>
+        <operation>equals</operation>
+        <value>En attente</value>
+    </filters>
+    <label>Signalements en attente</label>
+</ListView>

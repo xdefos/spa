@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>NumeroCTS__c</columns>
+    <columns>Adresse__c</columns>
+    <columns>Ville__c</columns>
+    <columns>CodePostal__c</columns>
+    <columns>NOMPrenomMEC__c</columns>
+    <columns>Especes__c</columns>
+    <columns>DateSignalement__c</columns>
+    <columns>Issue__c</columns>
+    <columns>Commentaire__c</columns>
+    <columns>OrigineSignalement__c</columns>
+    <columns>DateReception__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>DateReceptionCERFA__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tout</label>
+</ListView>

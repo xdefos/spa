@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VPA_Prise_en_charge_par_Referent</fullName>
+    <active>true</active>
+    <description>Le Visiteur Post-Adoption doit être habilité pour prendre en charge une VPA et le dossier doit être géré par la Maison SPA de Bordeaux</description>
+    <errorConditionFormula>AND(DelegueEnqueteurVPA__c  &lt;&gt; NULL,(OR(ISPICKVAL(DelegueEnqueteurVPA__r.Habilitation_VPA__c,&quot;Formation&quot;),ISPICKVAL(DelegueEnqueteurVPA__r.Habilitation_VPA__c,&quot;&quot;),ISPICKVAL(Statut__c, &quot;En cours délocalisée&quot;))))</errorConditionFormula>
+    <errorDisplayField>DelegueEnqueteurVPA__c</errorDisplayField>
+    <errorMessage>Le Visiteur Post-Adoption doit être habilité pour prendre en charge une VPA et le dossier doit être géré par la Maison SPA de Bordeaux</errorMessage>
+</ValidationRule>

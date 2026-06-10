@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GoogleMapURL__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;https://maps.googleapis.com/maps/api/staticmap?center=&quot;&amp; TEXT(Geolocation__Latitude__s) &amp; &quot;,&quot; &amp; TEXT(Geolocation__Longitude__s ) &amp; &quot;&amp;zoom=12&amp;size=550x550&amp;markers=color:blue%7C&quot; &amp; TEXT(Geolocation__Latitude__s) &amp; &quot;,&quot; &amp; TEXT(Geolocation__Longitude__s ) &amp; &quot;&amp;key=&quot; &amp; $Label.GoogleAPIKey</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Google Map URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VPA_clore</fullName>
+    <columns>NAME</columns>
+    <columns>NomAnimal__c</columns>
+    <columns>Statut__c</columns>
+    <columns>Ville__c</columns>
+    <columns>RefugeOrigine__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Statut__c</field>
+        <operation>equals</operation>
+        <value>À clore</value>
+    </filters>
+    <label>Visites Post-adoption à clore</label>
+</ListView>

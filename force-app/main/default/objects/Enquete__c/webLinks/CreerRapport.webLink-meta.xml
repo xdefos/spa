@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreerRapport</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Créer Rapport</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!URLFOR(&apos;/apex/SDOC__SDCreate1&apos;, null,[id=Enquete__c.Id, Object=&apos;Enquete__c&apos;, lightningnav=&apos;true&apos;, docList=&apos;RapportEnquete&apos;, autoopen=&apos;1&apos;])}</url>
+</WebLink>

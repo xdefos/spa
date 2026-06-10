@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AutresAnimauxContact__c</fullName>
+    <externalId>false</externalId>
+    <label>Autres animaux en contact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Liste_Especes</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

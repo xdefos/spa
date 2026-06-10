@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ENQ_Prise_en_charge_par_Referent</fullName>
+    <active>true</active>
+    <description>Le Délégué Enquêteur doit être habilité Référent pour prendre en charge une enquête</description>
+    <errorConditionFormula>ISPICKVAL( DelegueEnqueteurReferent__r.Habilitation_Enquete__c , &quot;Formation&quot;)</errorConditionFormula>
+    <errorDisplayField>DelegueEnqueteurReferent__c</errorDisplayField>
+    <errorMessage>Le Délégué Enquêteur doit être habilité Référent pour prendre en charge une enquête</errorMessage>
+</ValidationRule>

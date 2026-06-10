@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrigineSignalement__c</fullName>
+    <externalId>false</externalId>
+    <label>Origine et suivi du signalement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>STS</fullName>
+                <default>true</default>
+                <label>STS</label>
+            </value>
+            <value>
+                <fullName>CAT</fullName>
+                <default>false</default>
+                <label>Pro ou CAT</label>
+            </value>
+            <value>
+                <fullName>SJ</fullName>
+                <default>false</default>
+                <label>SJ</label>
+            </value>
+            <value>
+                <fullName>SARHA</fullName>
+                <default>false</default>
+                <label>SARHA</label>
+            </value>
+            <value>
+                <fullName>Local</fullName>
+                <default>false</default>
+                <label>Local</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

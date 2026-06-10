@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Principal__c</fullName>
+    <description>Identifie s&apos;il s&apos;agit du signalement principal qui a abouti à la création d&apos;une enquête ou si c&apos;est un doublon</description>
+    <externalId>false</externalId>
+    <formula>IF( isBlank(DoubleDuSignalement__c),true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Principal</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

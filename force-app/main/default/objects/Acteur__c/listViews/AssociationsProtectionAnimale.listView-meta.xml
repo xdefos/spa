@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssociationsProtectionAnimale</fullName>
+    <columns>NAME</columns>
+    <columns>Especes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TypeActeur__c</field>
+        <operation>equals</operation>
+        <value>Association protection animale</value>
+    </filters>
+    <filters>
+        <field>CooperationSPA__c</field>
+        <operation>notContain</operation>
+        <value>Défavorable,Obsolète</value>
+    </filters>
+    <label>Associations de Protection Animale</label>
+</ListView>

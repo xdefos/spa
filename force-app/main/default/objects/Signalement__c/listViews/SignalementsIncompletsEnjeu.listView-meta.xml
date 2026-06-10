@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignalementsIncompletsEnjeu</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Ville__c</columns>
+    <columns>DateSignalement__c</columns>
+    <columns>DateRelanceCERFA__c</columns>
+    <columns>DateAppelMairie__c</columns>
+    <columns>Commentaire__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>DateDemandeCERFA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Issue__c</field>
+        <operation>equals</operation>
+        <value>En attente</value>
+    </filters>
+    <filters>
+        <field>Enjeu__c</field>
+        <operation>equals</operation>
+        <value>Gravité possible</value>
+    </filters>
+    <filters>
+        <field>Enjeu__c</field>
+        <operation>equals</operation>
+        <value>Gravité avérée</value>
+    </filters>
+    <filters>
+        <field>DateRelanceCERFA__c</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:15</value>
+    </filters>
+    <filters>
+        <field>DateDemandeCERFA__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Signalements à enjeu à statuer</label>
+</ListView>

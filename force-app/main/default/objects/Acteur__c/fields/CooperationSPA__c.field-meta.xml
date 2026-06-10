@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CooperationSPA__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indique la facilité ou non de coopérer avec cet acteur pour la cause animale</inlineHelpText>
+    <label>Coopération avec la SPA</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Neutre</fullName>
+                <default>false</default>
+                <label>Neutre</label>
+            </value>
+            <value>
+                <fullName>Aléatoire</fullName>
+                <default>false</default>
+                <label>Aléatoire</label>
+            </value>
+            <value>
+                <fullName>Favorable</fullName>
+                <default>false</default>
+                <label>Favorable</label>
+            </value>
+            <value>
+                <fullName>Défavorable</fullName>
+                <default>false</default>
+                <label>Défavorable</label>
+            </value>
+            <value>
+                <fullName>Obsolète</fullName>
+                <default>false</default>
+                <label>Obsolète</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

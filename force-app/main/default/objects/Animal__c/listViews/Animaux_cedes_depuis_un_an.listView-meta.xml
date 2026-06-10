@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Animaux_cedes_depuis_un_an</fullName>
+    <columns>NAME</columns>
+    <columns>Espece__c</columns>
+    <columns>DateCession__c</columns>
+    <columns>TypeCession__c</columns>
+    <columns>Enquete__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DateCession__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:365</value>
+    </filters>
+    <filters>
+        <field>TypeCession__c</field>
+        <operation>equals</operation>
+        <value>Cession à la MSPA Bordeaux,Cession à un refuge SPA</value>
+    </filters>
+    <label>Animaux cédés à la SPA depuis 1 an</label>
+</ListView>

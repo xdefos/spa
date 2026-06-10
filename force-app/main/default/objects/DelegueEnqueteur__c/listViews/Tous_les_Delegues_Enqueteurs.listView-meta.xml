@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tous_les_Delegues_Enqueteurs</fullName>
+    <columns>NAME</columns>
+    <columns>Habilitation_Enquete__c</columns>
+    <columns>Habilitation_VPA__c</columns>
+    <columns>AncienDE__c</columns>
+    <columns>Telephone__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tous les Délégués Enquêteurs</label>
+</ListView>

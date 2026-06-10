@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_obligatoire</fullName>
+    <active>true</active>
+    <description>La date de réponse est nécessaire pour classer un signalement</description>
+    <errorConditionFormula>AND(ISBLANK(DateReceptionCERFA__c), OR (ISPICKVAL( Issue__c, &quot;Sans suite&quot;),ISPICKVAL( Issue__c, &quot;Transmis à la CAT&quot;),ISPICKVAL( Issue__c, &quot;Clôture par la CAT&quot;),ISPICKVAL( Issue__c, &quot;Enquête créée&quot;)))</errorConditionFormula>
+    <errorDisplayField>DateReceptionCERFA__c</errorDisplayField>
+    <errorMessage>La date de réponse est nécessaire pour classer un signalement</errorMessage>
+</ValidationRule>

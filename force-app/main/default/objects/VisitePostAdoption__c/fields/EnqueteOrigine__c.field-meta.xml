@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EnqueteOrigine__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Enquête à l&apos;origine de la cession</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Enquete__c.NombreAnimauxCedes__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Enquete__c</referenceTo>
+    <relationshipLabel>Visites Post-Adoption suite à cession</relationshipLabel>
+    <relationshipName>Visites_Post_Adoption</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

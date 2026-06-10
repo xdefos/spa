@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignalementOrigine__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Recherche du signalement à l&apos;origine de l&apos;enquête</description>
+    <externalId>false</externalId>
+    <label>Signalement d&apos;origine</label>
+    <referenceTo>Signalement__c</referenceTo>
+    <relationshipLabel>Enquête créée</relationshipLabel>
+    <relationshipName>EnqueteCreee</relationshipName>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FrequenceRelations__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indique la fréquence des relations entre SPA et cet acteur pour les dossiers liés à la cause animale</inlineHelpText>
+    <label>Fréquence des relations</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rare</fullName>
+                <default>false</default>
+                <label>Rare</label>
+            </value>
+            <value>
+                <fullName>Occasionnelle</fullName>
+                <default>false</default>
+                <label>Occasionnelle</label>
+            </value>
+            <value>
+                <fullName>Fréquente</fullName>
+                <default>false</default>
+                <label>Fréquente</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

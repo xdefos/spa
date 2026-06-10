@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChampsTitre__c</fullName>
+    <description>Champs utilisé pour l&apos;affichage du titre de l&apos;infobulle. 
+Ex : {Name}</description>
+    <externalId>false</externalId>
+    <label>Champs Titre</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

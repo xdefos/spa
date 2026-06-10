@@ -1,0 +1,309 @@
+<apex:page showHeader="false" controller="VFP01_GoogleMapController">
+  <apex:slds />
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {height: 800px;width: 100%;}
+      .holder{
+          width: 100%;;
+          height: 800px;
+          position: relative;
+      }
+      .bar{
+          position: fixed;
+          top: 9px;
+          width: 75%;
+          height: 40px;
+          z-index: 999;
+      }
+      .item-selector{
+        position: absolute;
+        left : 10px;
+        width: 170px;
+        height: 35px;
+        z-index: 999;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        background-color: white;
+      }
+      .items {
+        top: 180px;
+        height: auto;
+        max-height: 500px;
+        overflow: auto;
+      }
+      .search {
+        top: 140px;
+      }
+
+      .searchBox{
+        position: relative;
+        top: 10px;
+        left : 10px;
+        width: 150px;
+        height: 20px;
+        z-index: 999;
+        background-color: white;
+        vertical-align:middle;
+      }
+      .searchInput{
+        border: 0px;
+        vertical-align:middle;
+        width: 150px;
+      }
+
+      .slds-scope ul{
+        padding: 10px;
+        
+        background-color: white;
+      }
+      .action-bar{
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      }
+      .item-section {
+        font-weight: bold;
+      }
+      .ul-section {
+        top: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    
+
+    <!--The checkbox group element for the Geolocation to show  -->
+    <apex:form >
+      <div class="slds-form-element">
+        <div class="slds-align_absolute-center">
+        <ul class="slds-list_horizontal slds-has-block-links">
+          <apex:repeat value="{!params}" var="p">
+            <li>
+              <label class="slds-checkbox_toggle slds-grid slds-p-left_x-small">
+                <span class="slds-form-element__label slds-m-bottom_none">{!p.Name}</span>
+                <input type="checkbox" name="paramSelect" value="{!p.Id}" aria-describedby="{!p.Id}" onclick="javascript:setMarkers();" id="{!p.Id}" />
+                <span id="{!p.Name}" class="slds-checkbox_faux_container" aria-live="assertive">
+                  <span class="slds-checkbox_faux"></span>
+                </span>
+              </label>
+            </li>
+          </apex:repeat>
+        </ul>
+      </div>
+      </div>
+    </apex:form>
+
+        <!--The the list of item retrieved  -->
+        <div class="item-selector search">
+          <div class="searchBox">
+            <input id="pac-input" class="controls searchInput" type="text" placeholder="Recherche Ville" />
+          </div>
+        </div>
+        <div class="item-selector items">
+          <ul class="slds-has-dividers_top slds-has-block-links ul-section" id="markerList"></ul>
+        </div>
+
+        <!--The div element for the map -->
+        <div id="map"></div>
+
+    <script>
+      var map;
+      var geolocations;
+      var params;
+      var paramsById;
+      var paramsSelected;
+      var markers=[];
+      var mMarkers = new Map();
+      var paramNameById= new Map();
+      var infowindows=new Map();
+
+      // init callbak after google map is printed
+          function initMap() {
+
+            // Init Google Map 
+              var mapProp = {
+                  center: {lat: 44.8024068, lng: -0.554149},
+                  zoom: 9,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+
+              map = new google.maps.Map(document.getElementById('map'), mapProp);           
+              
+              // Get Param and paramName Map 
+              params = JSON.parse('{!paramsJSON}');
+              jParamNameById = JSON.parse('{!paramNameById}');
+              for (var value in jParamNameById) {  
+                  paramNameById.set(value,jParamNameById[value]);  
+                  }
+
+              for (p of params) {
+                if (p.affichageDefaut) {
+                  document.getElementById(p.id).checked = true;
+                }
+              }
+
+              // Get All Geoloc in a map 
+              geolocations = JSON.parse('{!geolocByParamId}');
+
+              // Print Markers
+              setMarkers();
+
+              // Add search box
+              setSearchBox(); 
+
+          }
+
+          // add and configure the searhBox
+          function setSearchBox(){
+
+            // Create the search box and link it to the UI element.
+            const input = document.getElementById("pac-input");
+            var options = {
+                types: ['(cities)'],
+                componentRestrictions: {country: "fr"}
+            };
+            const searchBox = new google.maps.places.SearchBox(input,options);
+
+            // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+            // Bias the SearchBox results towards current map's viewport.
+            map.addListener("bounds_changed", () => {
+              searchBox.setBounds(map.getBounds());
+            });
+
+            searchBox.addListener("places_changed", () => {
+              const places = searchBox.getPlaces();
+
+              if (places.length == 0) {
+                return;
+              }
+
+              // For each place, get the icon, name and location.
+              const bounds = new google.maps.LatLngBounds();
+              places.forEach(place => {
+                if (!place.geometry) {
+                  console.log("Returned place contains no geometry");
+                  return;
+                }
+                const icon = {
+                  url: place.icon,
+                  size: new google.maps.Size(71, 71),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(17, 34),
+                  scaledSize: new google.maps.Size(25, 25)
+                };
+                // Create a marker for each place.
+                markers.push(
+                  new google.maps.Marker({
+                    map,
+                    icon,
+                    title: place.name,
+                    position: place.geometry.location
+                  })
+                );
+
+                if (place.geometry.viewport) {
+                  // Only geocodes have viewport.
+                  bounds.union(place.geometry.viewport);
+                } else {
+                  bounds.extend(place.geometry.location);
+                }
+              });
+
+              map.fitBounds(bounds);
+              map.setZoom(9);
+            });
+          }
+
+          // reset and set all markers
+          function setMarkers(){
+            removeMarkers();
+            setParamsSelected();
+            for (const [key, value] of Object.entries(geolocations)) {
+              if (paramsSelected.includes(key)) {
+                addListSection(key);
+                  for(g of value) {
+                    addMarker(g);
+                    addMarkerList(g);
+                  }
+              }
+            }
+          }
+
+          // remove all markers
+          function removeMarkers(){
+            //clear items in map
+            for(i=0; i<markers.length; i++){
+                  markers[i].setMap(null);
+            }
+            //clear items in list 
+            document.getElementById("markerList").innerHTML = "";
+          }
+
+          // set a variable when select a param
+          function setParamsSelected(){
+            paramsSelected = [];
+            var paramsCheckbox = document.getElementsByName('paramSelect');
+            for(p of paramsCheckbox) {
+              if(p.checked){
+                paramsSelected.push(p.value)
+              }
+            }
+          }
+
+          // add a unique marker
+          function addMarker(g) {
+            var latlng = new google.maps.LatLng(g.location.Latitude, g.location.Longitude);
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                  icon: decodeURIComponent(g.icon),
+            });
+            var infowindow = new google.maps.InfoWindow();
+
+            var infoText = '<B><a href="/'+ g.id + '">'+ decodeURIComponent(g.title) + '</a></b><BR>';
+            infoText += decodeURIComponent(g.description);
+
+            marker.addListener('click', function() {
+              infowindow.setContent(infoText);
+              infowindow.open(map, this);
+            });
+              
+
+
+            markers.push(marker);
+            mMarkers.set(g.id,marker);
+          }
+
+          // add content item in the list
+          function addMarkerList(g) {
+            var li = document.createElement("li");
+            li.className = "slds-item";
+            var a = document.createElement("a");
+            a.href = "javascript:mapFocus('"+g.location.Latitude+"','"+g.location.Longitude+"','"+ g.id +"')";
+            var textnode = document.createTextNode(decodeURIComponent(g.title));
+            a.appendChild(textnode);
+            li.appendChild(a);
+            document.getElementById("markerList").appendChild(li);
+          }
+
+          // add section item in the list
+          function addListSection(textnode) {
+            var li = document.createElement("li");
+            li.className = "slds-item item-section slds-has-dividers_around";
+            var textli = document.createTextNode(paramNameById.get(textnode));
+            li.appendChild(textli);
+            document.getElementById("markerList").appendChild(li);
+          }
+
+          // set the focus to the map
+          function mapFocus(latitude, longitude, markerId) {
+              var latlng = new google.maps.LatLng(latitude, longitude);
+              map.setCenter(latlng);
+              google.maps.event.trigger(mMarkers.get(markerId), 'click');
+          }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={!$Label.GoogleAPIKey}&libraries=places&callback=initMap">
+    </script>
+  </body>
+</apex:page>

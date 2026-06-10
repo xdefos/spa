@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NonMAJEnquete__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Si actif, pas de mise à jour du dernier Commentaire sur l&apos;enquête. Pour éviter une boucle lors d&apos;un edit du champs sur l&apos;enquête</description>
+    <externalId>false</externalId>
+    <label>Non MAJ Enquête</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

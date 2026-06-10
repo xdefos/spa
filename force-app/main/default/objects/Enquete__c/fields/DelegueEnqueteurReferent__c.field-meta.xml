@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DelegueEnqueteurReferent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Délégué Enquêteur référent</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>DelegueEnqueteur__c.Habilitation_Enquete__c</field>
+            <operation>contains</operation>
+            <value>Référent</value>
+        </filterItems>
+        <infoMessage>Le Délégué Enquêteur doit être habilité Référent ou Référent formateur</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>DelegueEnqueteur__c</referenceTo>
+    <relationshipLabel>Enquêtes SPA (Délégué Enquêteur Référent)</relationshipLabel>
+    <relationshipName>EnquetesReferentes</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

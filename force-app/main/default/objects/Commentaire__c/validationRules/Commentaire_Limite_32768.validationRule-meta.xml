@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commentaire_Limite_32768</fullName>
+    <active>true</active>
+    <description>Chaque commentaire ne doit pas faire plus de 32768 caractères</description>
+    <errorConditionFormula>LEN(Commentaire__c) &gt; 32768</errorConditionFormula>
+    <errorDisplayField>Commentaire__c</errorDisplayField>
+    <errorMessage>Chaque commentaire ne peut pas dépasser 32768 caractères. Chaque commentaire doit décrire l&apos;ensemble des actions réalisées à la date du commentaire</errorMessage>
+</ValidationRule>

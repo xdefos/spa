@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ENQ_VR02_Statut_Close_interdit_au_DE</fullName>
+    <active>true</active>
+    <description>Un Délégué Enquêteur ne peut pas mettre le statut  d&apos;une enquête à &quot;Close&quot; po la modifier si elle est close</description>
+    <errorConditionFormula>AND (
+$Profile.Name = &quot;Delegue Enqueteur SPA&quot;,
+OR (
+AND (
+ISPICKVAL(Statut__c,&quot;En cours&quot;),
+ISPICKVAL(PRIORVALUE(Statut__c),&quot;Close&quot;)),
+AND (
+ISPICKVAL(Statut__c,&quot;À clore&quot;),
+ISPICKVAL(PRIORVALUE(Statut__c),&quot;Close&quot;)),
+AND (
+ISPICKVAL (Statut__c, &apos;Close&apos;),
+NOT(ISPICKVAL(PRIORVALUE(Statut__c),&quot;Close&quot;)))
+)
+)</errorConditionFormula>
+    <errorDisplayField>Statut__c</errorDisplayField>
+    <errorMessage>En tant que Délégué Enquêteur, vous ne pouvez pas déclarer une enquête close ni changer le statut d&apos;une enquête déjà close</errorMessage>
+</ValidationRule>

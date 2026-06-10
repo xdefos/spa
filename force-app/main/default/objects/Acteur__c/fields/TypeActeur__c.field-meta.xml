@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TypeActeur__c</fullName>
+    <externalId>false</externalId>
+    <label>Type d&apos;acteur</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acteur SPA</fullName>
+                <default>false</default>
+                <label>Acteur SPA</label>
+            </value>
+            <value>
+                <fullName>Association protection animale</fullName>
+                <default>false</default>
+                <label>Acteur protection animale</label>
+            </value>
+            <value>
+                <fullName>Santé animale</fullName>
+                <default>false</default>
+                <label>Santé animale</label>
+            </value>
+            <value>
+                <fullName>Services municipaux</fullName>
+                <default>false</default>
+                <label>Services municipaux</label>
+            </value>
+            <value>
+                <fullName>Forces de l&apos;ordre</fullName>
+                <default>false</default>
+                <label>Forces de l&apos;ordre</label>
+            </value>
+            <value>
+                <fullName>Services de l&apos;État</fullName>
+                <default>false</default>
+                <label>Services de l&apos;État</label>
+            </value>
+            <value>
+                <fullName>Services de Justice</fullName>
+                <default>false</default>
+                <label>Services de Justice</label>
+            </value>
+            <value>
+                <fullName>Acteur associatif</fullName>
+                <default>false</default>
+                <label>Acteur associatif</label>
+            </value>
+            <value>
+                <fullName>Acteur local</fullName>
+                <default>false</default>
+                <label>Acteur local</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

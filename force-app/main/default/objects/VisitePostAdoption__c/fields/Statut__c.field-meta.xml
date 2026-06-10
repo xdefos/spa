@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Statut__c</fullName>
+    <externalId>false</externalId>
+    <label>Statut</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>En cours par la MSPA</fullName>
+                <default>false</default>
+                <label>En cours par la MSPA</label>
+            </value>
+            <value>
+                <fullName>En cours délocalisée</fullName>
+                <default>false</default>
+                <label>En cours délocalisée</label>
+            </value>
+            <value>
+                <fullName>À clore</fullName>
+                <default>false</default>
+                <label>À clore</label>
+            </value>
+            <value>
+                <fullName>Close</fullName>
+                <default>false</default>
+                <label>Close</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

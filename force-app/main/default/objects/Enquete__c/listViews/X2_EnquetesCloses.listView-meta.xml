@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_EnquetesCloses</fullName>
+    <columns>NAME</columns>
+    <columns>NumeroCTS__c</columns>
+    <columns>Especes__c</columns>
+    <columns>Signalement__c</columns>
+    <columns>Ville__c</columns>
+    <columns>Adresse__c</columns>
+    <columns>Issues__c</columns>
+    <columns>DelegueEnqueteurReferent__c</columns>
+    <columns>NombreAnimauxCedes__c</columns>
+    <columns>NombreAnimauxCedesTiers__c</columns>
+    <columns>DateCloture__c</columns>
+    <columns>FichiersOptimises__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Statut__c</field>
+        <operation>equals</operation>
+        <value>Close</value>
+    </filters>
+    <label>Enquêtes closes</label>
+</ListView>

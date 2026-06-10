@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue__c</fullName>
+    <externalId>false</externalId>
+    <label>Issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sans suite</fullName>
+                <default>false</default>
+                <label>Sans suite</label>
+            </value>
+            <value>
+                <fullName>Disparition</fullName>
+                <default>false</default>
+                <label>Disparition</label>
+            </value>
+            <value>
+                <fullName>Décès</fullName>
+                <default>false</default>
+                <label>Décès</label>
+            </value>
+            <value>
+                <fullName>Sans succès</fullName>
+                <default>false</default>
+                <label>Sans succès</label>
+            </value>
+            <value>
+                <fullName>Pas de maltraitance</fullName>
+                <default>false</default>
+                <label>Pas de maltraitance</label>
+            </value>
+            <value>
+                <fullName>Pédagogie amélioration conditions de vie</fullName>
+                <default>false</default>
+                <label>Pédagogie amélioration conditions de vie</label>
+            </value>
+            <value>
+                <fullName>Cession à la SPA</fullName>
+                <default>false</default>
+                <label>Cession à la SPA</label>
+            </value>
+            <value>
+                <fullName>Cession à la SPA et plainte</fullName>
+                <default>false</default>
+                <label>Cession à la SPA et plainte</label>
+            </value>
+            <value>
+                <fullName>Cession à un tiers</fullName>
+                <default>false</default>
+                <label>Cession à un tiers</label>
+            </value>
+            <value>
+                <fullName>PlainteCessionTiers</fullName>
+                <default>false</default>
+                <label>Cession à un tiers et plainte</label>
+            </value>
+            <value>
+                <fullName>Plainte</fullName>
+                <default>false</default>
+                <label>Plainte</label>
+            </value>
+            <value>
+                <fullName>Plainteréquisition</fullName>
+                <default>false</default>
+                <label>Plainte et réquisition</label>
+            </value>
+            <value>
+                <fullName>Transmis à la CAT</fullName>
+                <default>false</default>
+                <label>Transmis à la CAT</label>
+            </value>
+            <value>
+                <fullName>Transmis à un autre refuge</fullName>
+                <default>false</default>
+                <label>Transmis à un autre refuge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

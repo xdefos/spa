@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DelegueEnqueteurVPA__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Visiteur Post-adoption</label>
+    <referenceTo>DelegueEnqueteur__c</referenceTo>
+    <relationshipLabel>Visites Post-Adoption</relationshipLabel>
+    <relationshipName>Visites_Post_Adoption</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

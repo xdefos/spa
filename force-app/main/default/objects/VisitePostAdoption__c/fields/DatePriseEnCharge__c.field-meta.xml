@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DatePriseEnCharge__c</fullName>
+    <description>La date de prise en charge est calculée automatiquement</description>
+    <externalId>false</externalId>
+    <inlineHelpText>La date de prise en charge est calculée automatiquement</inlineHelpText>
+    <label>Date de prise en charge</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

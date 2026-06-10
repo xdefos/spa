@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HeuresBenevolat__c</fullName>
+    <description>Calcul du nombre d&apos;heures de bénévolat en tenant compte du nombre d&apos;enquêteurs, du nombre de passages et du traitement du signalement</description>
+    <externalId>false</externalId>
+    <formula>(3.5 * IF(ISBLANK(DelegueEnqueteurReferent__c),0,1) + 2 * IF(ISBLANK(DelegueEnqueteurBinome__c),0,1) + 2 * IF(ISBLANK(DelegueEnqueteurTrinome__c),0,1))
+*
+(IF(ISBLANK(Date1erPassage__c),0,1) + IF(ISBLANK(Date2emePassage__c),0,1) + IF(ISBLANK(Date3emePassage__c),0,1) + IF(ISBLANK(Date4emePassage__c),0,1) + IF(ISBLANK(Date5emePassage__c),0,1) + IF(ISBLANK(Date6emePassage__c),0,1))
+
++ (IF(ISBLANK(DelegueEnqueteurReferent__c),0,1) * (IF(ISBLANK(Date1erPassage__c),1,0)))
+
++ (1 + SignalementOrigine__r.NombreDoublons__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Champ calculé automatiquement</inlineHelpText>
+    <label>Heures de bénévolat</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issues__c</fullName>
+    <description>Indique quelles ont été les issues du dossier sous les différents aspects: juridique, conditions de vie, cession, succès ou non...</description>
+    <externalId>false</externalId>
+    <label>Issues</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sans suite</fullName>
+                <default>false</default>
+                <label>Sans suite</label>
+            </value>
+            <value>
+                <fullName>Sans succès</fullName>
+                <default>false</default>
+                <label>Sans succès</label>
+            </value>
+            <value>
+                <fullName>Décès</fullName>
+                <default>false</default>
+                <label>Décès</label>
+            </value>
+            <value>
+                <fullName>Disparition</fullName>
+                <default>false</default>
+                <label>Disparition</label>
+            </value>
+            <value>
+                <fullName>Transfert à la CAT</fullName>
+                <default>false</default>
+                <label>Transfert à la CAT ou DDPP</label>
+            </value>
+            <value>
+                <fullName>Transfert à un refuge SPA</fullName>
+                <default>false</default>
+                <label>Transfert à un refuge SPA</label>
+            </value>
+            <value>
+                <fullName>Transfert à une association</fullName>
+                <default>false</default>
+                <label>Transfert à une association</label>
+            </value>
+            <value>
+                <fullName>Pas de maltraitance</fullName>
+                <default>false</default>
+                <label>Pas de maltraitance</label>
+            </value>
+            <value>
+                <fullName>Pédagogie et amélioration des conditions de vie</fullName>
+                <default>false</default>
+                <label>Pédagogie et amélioration des conditions de vie</label>
+            </value>
+            <value>
+                <fullName>Cession à la SPA</fullName>
+                <default>false</default>
+                <label>Cession à la SPA</label>
+            </value>
+            <value>
+                <fullName>Cession à un tiers</fullName>
+                <default>false</default>
+                <label>Cession à un tiers</label>
+            </value>
+            <value>
+                <fullName>Plainte</fullName>
+                <default>false</default>
+                <label>Plainte</label>
+            </value>
+            <value>
+                <fullName>Constitution Partie Civile</fullName>
+                <default>false</default>
+                <label>Constitution Partie Civile</label>
+            </value>
+            <value>
+                <fullName>Réquisition</fullName>
+                <default>false</default>
+                <label>Réquisition</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

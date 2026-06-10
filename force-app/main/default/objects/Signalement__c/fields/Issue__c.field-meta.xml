@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue__c</fullName>
+    <externalId>false</externalId>
+    <label>Issue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>En attente</fullName>
+                <default>true</default>
+                <label>En attente</label>
+            </value>
+            <value>
+                <fullName>Sans suite</fullName>
+                <default>false</default>
+                <label>Sans suite</label>
+            </value>
+            <value>
+                <fullName>Transmis à la CAT</fullName>
+                <default>false</default>
+                <label>Transmis à la CAT</label>
+            </value>
+            <value>
+                <fullName>Clôture par la CAT</fullName>
+                <default>false</default>
+                <label>Clôture par la CAT</label>
+            </value>
+            <value>
+                <fullName>Enquête créée</fullName>
+                <default>false</default>
+                <label>Enquête créée</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
