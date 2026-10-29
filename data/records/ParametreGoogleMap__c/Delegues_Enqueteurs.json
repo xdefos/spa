@@ -1,0 +1,10 @@
+{
+  "AffichageDefaut__c": true,
+  "ChampsDescription__c": "{Ville__c}",
+  "ChampsTitre__c": "{Name}",
+  "ExtId__c": "a153X000006BzQWQA1",
+  "Icone__c": "https://mt.googleapis.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1733-wc-unisex_4x.png&highlight=ff000000,01D758&scale=0.8",
+  "Name": "Délégués Enquêteurs",
+  "OrdreAffichage__c": 4,
+  "RequeteSOQL__c": "SELECT Name, Ville__c FROM DelegueEnqueteur__c WHERE AncienDE__c = null AND Habilitation_Enquete__c <> null"
+}

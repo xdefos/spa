@@ -1,0 +1,10 @@
+{
+  "AffichageDefaut__c": false,
+  "ChampsDescription__c": "{Especes__c}<br>{Signalement__c}<br>{Ville__c}<br>{DelegueEnqueteurReferentName__c}<br>{DelegueEnqueteurBinomeName__c}",
+  "ChampsTitre__c": "{Name}",
+  "ExtId__c": "a153X000006BzQUQA1",
+  "Icone__c": "https://mt.googleapis.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1506-animal-head_4x.png&highlight=ff000000,0288D1&scale=0.8",
+  "Name": "Enquêtes avec DE Ref",
+  "OrdreAffichage__c": 2,
+  "RequeteSOQL__c": "SELECT Name, Signalement__c, Especes__c, DelegueEnqueteurReferentName__c, DelegueEnqueteurBinomeName__c, Ville__c    FROM Enquete__c WHERE Statut__c = 'En cours' AND DelegueEnqueteurReferent__c <> null"
+}

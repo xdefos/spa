@@ -1,0 +1,10 @@
+{
+  "AffichageDefaut__c": false,
+  "ChampsDescription__c": "{ActeurName__c}<br>{Ville__c}",
+  "ChampsTitre__c": "{Name}",
+  "ExtId__c": "a153X000006Cdu8QAC",
+  "Icone__c": "https://mt.google.com/vt/icon/name=icons/onion/SHARED-mymaps-container-bg_4x.png,icons/onion/SHARED-mymaps-container_4x.png,icons/onion/1657-police-officer_4x.png&highlight=ff000000,0000ff,ff000000&scale=0.8",
+  "Name": "Nos contacts",
+  "OrdreAffichage__c": 6,
+  "RequeteSOQL__c": "SELECT Name, Ville__c, ActeurName__c FROM ContactLocal__c"
+}

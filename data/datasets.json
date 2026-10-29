@@ -1,0 +1,19 @@
+{
+  "ParametreGoogleMap__c": {
+    "description": "Configuration de la carte Google Maps (couches, requetes SOQL, icones)",
+    "key": "Name"
+  },
+  "SDOC__SDTemplate__c": {
+    "description": "Templates S-Docs (generation des rapports PDF)",
+    "key": "Name",
+    "exclude": ["OwnerId", "SDOC__Preview_ID__c"],
+    "html": {
+      "fields": [
+        "SDOC__Template_XML__c", "SDOC__Template_XML2__c", "SDOC__Template_XML3__c",
+        "SDOC__Template_XML4__c", "SDOC__Template_XML5__c", "SDOC__Template_XML6__c",
+        "SDOC__Template_XML7__c", "SDOC__Template_XML8__c", "SDOC__Template_XML9__c",
+        "SDOC__Template_XML10__c"
+      ]
+    }
+  }
+}
