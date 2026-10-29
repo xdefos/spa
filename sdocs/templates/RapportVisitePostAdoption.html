@@ -1,0 +1,234 @@
+<style type="text/css">html{
+	font-family: "Roboto",sans-serif;
+	background-color:rgb(230, 255, 255);
+	font-size: 11px;
+	}
+	H2.MsoNormal {
+	color: rgb(24, 24, 24);
+	text-indent: 3em;
+	font-weight: normal;
+	}
+	.MsoTable15Plain{
+	width: 80%;
+	border-collapse: collapse;
+	border: none;
+	margin-left: 5em;
+	margin-bottom: 4em;
+	}
+	.MsoTable15Single{
+	width: 50%;
+	border-collapse: collapse;
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	.MsoTableTd{
+	width: 99pt;
+	/* border-top: solid #7F7F7F 1pt; */
+	/* border-left: none; */
+	/* border-bottom: solid #7F7F7F 1pt; */
+	/* border-right: none; */
+	border-color: #6f614f;
+	border: none;
+	padding: 5px 5px 5px 5px;
+	/* border-color: #6f614f;*/
+	}
+	.MsoNormalLabel{
+	margin-bottom:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	font-weight: bold;
+	background-color: rgb(0, 136, 204);
+	border:1px solid #6f614f;
+	color:#fff;
+	}
+	.MsoNormalValue{
+	margin-bottom:0cm;
+	margin-bottom:.0001pt;
+	line-height:normal;
+	background-color: #fff;
+	border:1px solid #d2d2d2;
+	}
+</style>
+<div class="WordSection1"><!-- ______________________________________________ I ______________________________________________ -->
+<h2 class="MsoNormal"><span>&nbsp;I.&nbsp; Contrat d’adoption</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Numéro de contrat</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.Name}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Statut</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.Statut__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Visiteur Post-adoption</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DelegueEnqueteurVPA__r.Name}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Refuge d'origine</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.RefugeOrigine__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Consignes au Visiteur Post-adoption</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.Consignes__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Refuge missionné</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.RefugeMissionne__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel"> </td>
+			<td class="MsoTableTd MsoNormalValue"> </td>
+			<td class="MsoTableTd MsoNormalLabel">Enquête à l'origine de la cession</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.EnqueteOrigine__r.Name}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ II ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;II.&nbsp; Animal</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Espèce</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.Espece__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Nom de l'animal</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.NomAnimal__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Identifiant Argos de l'animal</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.Identifiant__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Race et sexe</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.RaceSexe__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Mode d'identification</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.ModeIdentification__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Numéro d'identification</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.NumeroIdentificationAnimal__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de naissance</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DateNaissance__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Aspect taille couleur</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.AspectTailleCouleur__c}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 class="MsoNormal"><span></span><span>III.&nbsp; Lieu d’adoption</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel" style="width: 219px;">NOM Prénom Adoptant</td>
+			<td class="MsoTableTd MsoNormalValue" style="width: 230px;">{{!VisitePostAdoption__c.NomPrenomAdoptant__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel" style="width: 219px;">Adresse</td>
+			<td class="MsoTableTd MsoNormalValue" style="width: 220px;">{{!VisitePostAdoption__c.Adresse__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel" style="width: 219px;">Téléphone</td>
+			<td class="MsoTableTd MsoNormalValue" style="width: 230px;">{{!VisitePostAdoption__c.Telephone__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel" style="width: 219px;">Code postal</td>
+			<td class="MsoTableTd MsoNormalValue" style="width: 220px;">{{!VisitePostAdoption__c.CodePostal__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel" style="width: 219px;"> </td>
+			<td class="MsoTableTd MsoNormalValue" style="width: 230px;"> </td>
+			<td class="MsoTableTd MsoNormalLabel" style="width: 219px;">Ville</td>
+			<td class="MsoTableTd MsoNormalValue" style="width: 220px;">{{!VisitePostAdoption__c.Ville__c}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 class="MsoNormal"><span>IV.&nbsp; Dates</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date d'adoption</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DateAdoption__c dd/MM/yyyy}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Date de passage à prévoir</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DatePassagePrevisionnel__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de prise en charge</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DatePriseEnCharge__c dd/MM/yyyy}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Date envoi du dossier</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DateEnvoiDossier__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de passage réalisé</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DatePassageRealise__c dd/MM/yyyy}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Date de clôture</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DateCloture__c dd/MM/yyyy}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ V ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;</span></h2>
+
+<div style="page-break-after: always"><span style="display: none;">&nbsp;</span></div>
+
+<h2 class="MsoNormal"><span>V.&nbsp; Rapport de Visite</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Avez-vous vu l'animal</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.AvezVousVuAnimal__c checkbox="true"}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Animal en bon état</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.AnimalBonEtat__c checkbox="true"}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">L'animal a-t-il un collier</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.AnimalCollier__c checkbox="true"}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Lieu de vie principal</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.LieuVie__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Accès à l'extérieur</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.AccesExterieur__c checkbox="true"}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Eau à disposition</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.EauDisposition__c checkbox="true"}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Nourriture</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.Nourriture__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Autres animaux en contact</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.AutresAnimauxContact__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Vaccination à jour</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.VaccinationAJour__c checkbox="true"}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Date du dernier rappel de vaccin</td>
+			<td class="MsoTableTd MsoNormalValue">{{!VisitePostAdoption__c.DateDernierRappelVaccin__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Rapport du Visiteur Post-Adoption</td>
+			<td class="MsoTableTd MsoNormalValue" colspan="3">{{{!VisitePostAdoption__c.Commentaires__c}}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ VI ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;</span></h2>
+
+<div style="page-break-after: always"><span style="display: none;">&nbsp;</span></div>
+
+<h2 class="MsoNormal"><span>VI.&nbsp; Pièces jointes au dossier</span></h2>
+<!--{{!
+		  <lineitemsSOQL>
+ 
+				<soql>SELECT
+			 ContentDocument.Title, ContentDocument.CreatedDate, ContentDocument.Description, ContentDocument.latestpublishedversionid 
+		 FROM contentdocumentlink 
+		 WHERE linkedentityid='{{!VisitePostAdoption__c.Id}}' 
+		 ORDER BY ContentDocument.CreatedDate ASC
+				</soql>
+ 
+		 <column prefix="<table border='1' cellpadding='0' cellspacing='0' class='MsoTable15Plain'><tbody><tr><td class='MsoTableTd MsoNormalLabel'>Nom du fichier</td><td class='MsoTableTd MsoNormalValue'>" postfix="</td>">ContentDocument.Title</column>
+		 <column format-date="dd/MM/yyyy" prefix="<td class='MsoTableTd MsoNormalLabel'>Date</td><td class='MsoTableTd MsoNormalValue'>" postfix="</td></tr>">ContentDocument.CreatedDate</column>
+		 <column prefix="<tr><td class='MsoTableTd MsoNormalLabel'>Description</td><td class='MsoTableTd MsoNormalValue' colspan='3'>" postfix="</td></tr>">ContentDocument.Description</column>
+			  <column prefix="<tr><td class='MsoTableTd MsoNormalValue' Colspan='4'><p style='text-align: center;'> <img src='/sfc/servlet.shepherd/version/download/" postfix="' width='490px' /></p></td></tr></tbody></table><p style='page-break-after:always;'> </p>">ContentDocument.latestpublishedversionid</column>
+	 </lineitemsSOQL>
+		  }}--></div>

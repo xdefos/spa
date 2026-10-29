@@ -1,0 +1,340 @@
+<style type="text/css">html{
+   font-family: "Roboto",sans-serif;
+   background-color: #fffaf7;
+   font-size: 11px;
+   }
+   H2.MsoNormal {
+   color: #eb651c;
+   text-indent: 3em;
+   font-weight: normal;
+   }
+   .MsoTable15Plain{
+   width: 80%;
+   border-collapse: collapse;
+   border: none;
+   margin-left: 5em;
+   margin-bottom: 4em;
+   }
+   .MsoTable15Single{
+   width: 50%;
+   border-collapse: collapse;
+   border: none;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   .MsoTableTd{
+   width: 99pt;
+   /* border-top: solid #7F7F7F 1pt; */
+   /* border-left: none; */
+   /* border-bottom: solid #7F7F7F 1pt; */
+   /* border-right: none; */
+   border-color: #6f614f;
+   border: none;
+   padding: 5px 5px 5px 5px;
+   /* border-color: #6f614f;*/
+   }
+   .MsoNormalLabel{
+   margin-bottom:0cm;
+   margin-bottom:.0001pt;
+   line-height:normal;
+   font-weight: bold;
+   background-color: #6f614f;
+   border:1px solid #6f614f;
+   color:#fff;
+   }
+   .MsoNormalValue{
+   margin-bottom:0cm;
+   margin-bottom:.0001pt;
+   line-height:normal;
+   background-color: #fff;
+   border:1px solid #d2d2d2;
+   }
+</style>
+<div class="WordSection1"><!-- ______________________________________________ I ______________________________________________ -->
+<h2 class="MsoNormal"><span>&nbsp;I.&nbsp; Références de l'Enquête</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Numéro</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Name}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Signalement d'origine</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.Name}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">N°&nbsp;CTS</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.NumeroCTS__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Priorité</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Priorite__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">N°&nbsp;Juridique</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.NumeroJuridique__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Statut</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Statut__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Délégué Enquêteur Référent</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DelegueEnqueteurReferentName__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Délégué Enquêteur Binôme</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DelegueEnqueteurBinomeName__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Délégué Enquêteur Trinôme</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DelegueEnqueteurTrinomeName__c}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ II ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;II.&nbsp; Signalement d'origine {{!Enquete__c.NumeroCTS__c}}</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">NOM et Prénom du signalant</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.NomPrenom__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Adresse du signalant</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.Adresse_Signalant__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Téléphone du signalant</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.Telephone__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Code postal</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.CodePostal_Signalant__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Mail du signalant</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.name}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Ville</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.Ville_Signalant__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Commentaires</td>
+			<td class="MsoTableTd MsoNormalValue" colspan="3">{{!Enquete__c.SignalementOrigine__r.Commentaire__c}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ III ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;III.&nbsp; Signalements doublons</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">N° CTS</td>
+			<td class="MsoTableTd MsoNormalLabel">NOM et Prénom du signalant</td>
+			<td class="MsoTableTd MsoNormalLabel">Date du signalement</td>
+			<td class="MsoTableTd MsoNormalLabel">Date de réception</td>
+		</tr>
+		<!--{{!
+         <lineitemsSOQL><class>none</class>
+           	<soql>
+		SELECT NumeroCTS__c, NomPrenom__c, DateSignalement__c, DateReception__c
+            FROM Signalement__c
+		WHERE DoubleDuSignalement__c='{{!Enquete__c.SignalementOrigine__r.id}}'
+           	</soql>
+         	<column prefix="<tr><td class='MsoTableTd MsoNormalValue'>" postfix="</td>">NumeroCTS__c</column>
+		<column prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td>">NomPrenom__c</column>
+		<column format-date="dd/MM/yyyy" prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td>">DateSignalement__c</column>
+		<column format-date="dd/MM/yyyy" prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td></tr>">DateReception__c</column>
+         </lineitemsSOQL>
+         }}-->
+	</tbody>
+</table>
+<!-- ______________________________________________ IV ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;IV.&nbsp; Dates Clés</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Single">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date du signalement</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DateSignalement__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de reception du signalement</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.SignalementOrigine__r.DateReception__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date envoi au DE</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DateEnvoiDE__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de 1er passage</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Date1erPassage__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de 2ème passage</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Date2emePassage__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de 3ème passage</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Date3emePassage__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de 4ème passage</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Date4emePassage__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de 5ème passage</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Date5emePassage__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de 6ème passage</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Date6emePassage__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de proposition de clôture</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DatePropositionCloture__c dd/MM/yyyy}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Date de clôture</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.DateCloture__c dd/MM/yyyy}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="page-break-after: always"><span style="display: none;">&nbsp;</span></div>
+<!-- ______________________________________________ V ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>V.&nbsp; Localisation</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">NOM et Prénom Mis en cause</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.NOMPrenomMEC__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel" rowspan="2">Adresse</td>
+			<td class="MsoTableTd MsoNormalValue" rowspan="2">{{!Enquete__c.Adresse__c}}<br />
+			{{!Enquete__c.CodePostal__c}} {{!Enquete__c.Ville__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Téléphone Mis en cause</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.TelephoneMEC__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalValue" colspan="4">
+			<p style="text-align:center"><img alt="" src="{{!Enquete__c.GoogleMapURL__c}}" width="550px" /></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ VI ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;VI.&nbsp; Description des faits</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Single">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Espèces</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Especes__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Motif de l’enquête</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Signalement__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Consignes au DE</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Consignes__c}}</td>
+		</tr>
+	</tbody>
+</table>
+<!-- ______________________________________________ VII ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;VII.&nbsp; Déroulement de l’enquête</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalValue"><!--{{!
+                     <lineitemsSOQL>
+
+                        <soql>SELECT
+                        DateCommentaire__c
+                    FROM Commentaire__c 
+                    WHERE Enquete__c='{{!Enquete__c.Id}}'
+                    ORDER BY Date__c ASC
+                        </soql>
+
+                    <column type="rtf" prefix="" postfix="<br/>">DateCommentaire__c</column>
+
+                </lineitemsSOQL>
+                     }}--></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="page-break-after:always;"> </p>
+<!-- ______________________________________________ VIII ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;VIII.&nbsp; Pièces jointes au dossier</span></h2>
+<!--{{!
+         <lineitemsSOQL>
+
+           	<soql>SELECT
+			ContentDocument.Title, ContentDocument.CreatedDate, ContentDocument.Description, ContentDocument.latestpublishedversionid 
+		FROM contentdocumentlink 
+		WHERE linkedentityid='{{!Enquete__c.Id}}' 
+		ORDER BY ContentDocument.CreatedDate ASC
+           	</soql>
+
+		<column prefix="<table border='1' cellpadding='0' cellspacing='0' class='MsoTable15Plain'><tbody><tr><td class='MsoTableTd MsoNormalLabel'>Nom du fichier</td><td class='MsoTableTd MsoNormalValue'>" postfix="</td>">ContentDocument.Title</column>
+		<column format-date="dd/MM/yyyy" prefix="<td class='MsoTableTd MsoNormalLabel'>Date</td><td class='MsoTableTd MsoNormalValue'>" postfix="</td></tr>">ContentDocument.CreatedDate</column>
+		<column prefix="<tr><td class='MsoTableTd MsoNormalLabel'>Description</td><td class='MsoTableTd MsoNormalValue' colspan='3'>" postfix="</td></tr>">ContentDocument.Description</column>
+         	<column prefix="<tr><td class='MsoTableTd MsoNormalValue' Colspan='4'><p style='text-align: center;'> <img src='/sfc/servlet.shepherd/version/download/" postfix="' width='500px' /></p></td></tr></tbody></table><p style='page-break-after:always;'> </p>">ContentDocument.latestpublishedversionid</column>
+	</lineitemsSOQL>
+         }}--><!-- ______________________________________________ IX ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;IX.&nbsp; Animaux cédés lors de l’enquête</span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Espèce</td>
+			<td class="MsoTableTd MsoNormalLabel">Nom</td>
+			<td class="MsoTableTd MsoNormalLabel">Type de cession</td>
+			<td class="MsoTableTd MsoNormalLabel">Date de cession</td>
+			<td class="MsoTableTd MsoNormalLabel">Commentaires</td>
+		</tr>
+		<!--{{!
+         <lineitemsSOQL><class>none</class>
+           	<soql>
+		SELECT Espece__c, Name, TypeCession__c, DateCession__c, Commentaires__c
+            FROM Animal__c
+		WHERE Enquete__c ='{{!Enquete__c.id}}'
+           	</soql>
+         	<column prefix="<tr><td class='MsoTableTd MsoNormalValue'>" postfix="</td>">Espece__c</column>
+		<column prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td>">Name</column>
+		<column prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td>">TypeCession__c</column>
+		<column format-date="dd/MM/yyyy" prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td>">DateCession__c</column>
+		<column prefix="<td class='MsoTableTd MsoNormalValue'>" postfix="</td></tr>">Commentaires__c</column>
+         </lineitemsSOQL>
+         }}-->
+	</tbody>
+</table>
+<!-- ______________________________________________ X ______________________________________________ -->
+
+<h2 class="MsoNormal"><span>&nbsp;X.&nbsp; Clôture de l’enquête le {{!Enquete__c.DateCloture__c dd/MM/yyyy}} </span></h2>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTable15Plain">
+	<tbody>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Issues de l'enquête</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Issues__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Durée de l’enquête</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.Duree__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Nombre d’animaux cédés à La SPA</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.NombreAnimauxCedes__c}}</td>
+			<td class="MsoTableTd MsoNormalLabel">Nombre d’animaux cédés à un tiers</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.NombreAnimauxCedesTiers__c}}</td>
+		</tr>
+		<tr>
+			<td class="MsoTableTd MsoNormalLabel">Nombre d'heures de bénévolat</td>
+			<td class="MsoTableTd MsoNormalValue">{{!Enquete__c.HeuresBenevolat__c}}</td>
+		</tr>
+	</tbody>
+</table>
+</div>
