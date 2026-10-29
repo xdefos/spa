@@ -108,7 +108,7 @@ def cmd_import(a):
             with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as t:
                 json.dump(body, t, ensure_ascii=False)
             try:
-                p = subprocess.run(["sf", "api", "request", "rest", url, "-X", method, "-b", t.name, "-o", a.org],
+                p = subprocess.run(["sf", "api", "request", "rest", url, "-X", method, "-b", "@" + t.name, "-o", a.org],
                                    capture_output=True, text=True)
                 if p.returncode != 0:
                     sys.exit(f"echec {method} {obj} {rec[key]}:\n{p.stdout}{p.stderr}")
