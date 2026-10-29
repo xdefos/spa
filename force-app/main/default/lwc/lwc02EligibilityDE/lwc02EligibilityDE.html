@@ -1,0 +1,33 @@
+<template>
+    <template if:true={display}>
+        <lightning-card title="Affectation DE" variant="narrow" icon-name="standard:omni_supervisor">
+            <lightning-layout vertical-align="end">
+                <lightning-layout-item padding="around-small">
+                    <lightning-input type="number" name="Distance Max DE" label="Distance Max DE (km)" onchange={handleMaxDistanceDEChange} value={maxDistanceDE}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-input type="number" name="Distance Max Enquêtes" label="Distance Max Enquêtes (km)" onchange={handleMaxDistanceEChange} value={maxDistanceE}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-button variant="brand" label="Calculer" title="Calculer" onclick={run}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-var-p-horizontal_medium" style="position:relative;min-height:100px;">
+                <template if:false={loaded}>
+                    <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                </template>
+                <template if:true={loaded}>
+                    <lightning-tree-grid
+                    hide-checkbox-column="true"
+                    columns={gridColumns}
+                    data={gridData}
+                    key-field="Id"
+                    selected-rows={selectedRows}
+                    onrowaction={handleAction}
+                    onrowselection={rowSelected}
+                ></lightning-tree-grid>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+</template>

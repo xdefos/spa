@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Envoi d&apos;un mail de demande de clôture d&apos;une VPA lorsque le Visiteur Post-Adoption passe la VPA à clore</description>
+        <name>EnvoiEmailDemandeClotureVPA</name>
+        <label>Envoi Email demande clôture VPA</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>bordeaux@la-spa.fr</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ObjetClotureVPA</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DemandeClotureVPA</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Envoi d&apos;un mail pour demander la clôture d&apos;une VPA</description>
+    <environments>Default</environments>
+    <interviewLabel>VPA à clore {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>VPA à clore</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>EnvoiEmailDemandeClotureVPA</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Statut__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>À clore</stringValue>
+            </value>
+        </filters>
+        <object>VisitePostAdoption__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Mail de demande de clôture d&apos;une VPA</description>
+        <name>DemandeClotureVPA</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;Bonjour&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;La visite post-adoption {!$Record.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;a été proposée à la clôture par {!$Record.DelegueEnqueteurVPA__r.Name}.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;Merci d&apos;examiner la clôture.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br&gt;
+&lt;img src=&quot;https://spa-bordeaux.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068AZ000002lIk5&amp;operationContext=DELIVERY&amp;contentId=05TAZ00000A7uuz&amp;page=0&amp;d=/a/AZ000000LuBp/192nPhK4nIj7INGzLrf5rZhMXvU8wsIJwbvAKnaAbcg&amp;oid=00D3X000002KdJv&amp;dpt=null&amp;viewId=&quot;&gt;&lt;/img&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>En-tête de demande clôture VPA</description>
+        <name>ObjetClotureVPA</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Demande de clôture de la Visite Post-Adoption  {!$Record.Name}</text>
+    </textTemplates>
+</Flow>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Principal__c</fullName>
     <description>Identifie s&apos;il s&apos;agit du signalement principal qui a abouti à la création d&apos;une enquête ou si c&apos;est un doublon</description>
-    <externalId>false</externalId>
     <formula>IF( isBlank(DoubleDuSignalement__c),true, false)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Principal</label>

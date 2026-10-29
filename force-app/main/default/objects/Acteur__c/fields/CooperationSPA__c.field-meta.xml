@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CooperationSPA__c</fullName>
-    <externalId>false</externalId>
     <inlineHelpText>Indique la facilité ou non de coopérer avec cet acteur pour la cause animale</inlineHelpText>
     <label>Coopération avec la SPA</label>
     <required>false</required>
@@ -35,7 +34,7 @@
             <value>
                 <fullName>Obsolète</fullName>
                 <default>false</default>
-                <label>Obsolète</label>
+                <label>Obsolète ou à éviter</label>
             </value>
         </valueSetDefinition>
     </valueSet>

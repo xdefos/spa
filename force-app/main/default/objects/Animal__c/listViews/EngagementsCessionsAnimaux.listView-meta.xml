@@ -4,10 +4,10 @@
     <columns>Enquete__c</columns>
     <columns>NAME</columns>
     <columns>Espece__c</columns>
+    <columns>Commentaires__c</columns>
     <columns>DateCession__c</columns>
-    <columns>TypeCession__c</columns>
-    <columns>CodePostal__c</columns>
     <columns>Ville__c</columns>
+    <columns>TypeCession__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>TypeCession__c</field>

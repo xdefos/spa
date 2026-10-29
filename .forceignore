@@ -10,3 +10,5 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+# Contient des cles API en clair (GoogleAPIKey, TinifyAPIKey) : ne jamais versionner
+**/labels/CustomLabels.labels-meta.xml

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Commentaires__c</fullName>
     <description>Informations sur le contact local, nature de nos relations...</description>
-    <externalId>false</externalId>
     <inlineHelpText>Informations sur le contact local, nature de nos relations...</inlineHelpText>
     <label>Commentaires</label>
     <required>false</required>

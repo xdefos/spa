@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TypeCession__c</fullName>
     <description>Indique le type de cession d&apos;un animal en interne à la SPA ou à un tiers (autre association ou personne physique)</description>
-    <externalId>false</externalId>
     <label>Type de cession</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

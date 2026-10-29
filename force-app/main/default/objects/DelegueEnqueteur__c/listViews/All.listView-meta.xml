@@ -7,13 +7,15 @@
     <columns>Telephone__c</columns>
     <columns>Email__c</columns>
     <columns>Habilitation_Enquete__c</columns>
-    <columns>Habilitation_VPA__c</columns>
-    <columns>DossierAJour__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>AncienDE__c</field>
         <operation>equals</operation>
         <value>0</value>
+    </filters>
+    <filters>
+        <field>Habilitation_Enquete__c</field>
+        <operation>notEqual</operation>
     </filters>
     <label>Gestion des Délégués Enquêteurs</label>
     <sharedTo>

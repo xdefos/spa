@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Enjeu__c</fullName>
     <description>Il s&apos;agit d&apos;évaluer la gravité de la situation à la lecture du signalement. Soit il n&apos;est pas possible de l&apos;évaluer, soit la gravité est connue mais faible, soit la gravité est possible mais non confirmée, soit la gravité est avérée grâce à des photos ou plusieurs témoignages</description>
-    <externalId>false</externalId>
     <label>Enjeu</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

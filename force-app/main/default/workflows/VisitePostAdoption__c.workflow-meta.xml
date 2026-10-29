@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>VPA_EA001_AlertePriseEnChargeVPA</fullName>
+        <description>VPA_EA001_AlertePriseEnChargeVPA</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>defossez.ph@spa.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>enquetes@sirius-spa.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Email_Prise_en_charge_VPA</template>
+    </alerts>
+</Workflow>

@@ -3,7 +3,6 @@
     <fullName>FichiersOptimises__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Déclenche l&apos;optimisation des fichiers attachés à l&apos;enquête</description>
-    <externalId>false</externalId>
     <label>Fichiers Optimisés</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

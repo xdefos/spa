@@ -19,6 +19,9 @@ trigger TRG06_Signalement on Signalement__c(before insert, before update,after I
 
             //Set various cross Object field : UpperCase Ville 
             UTI01_LocationCallouts.setObjectFields(Trigger.new, Trigger.oldMap,'Signalement__c');
+
+            //Set Geolocation for Enquete
+        	UTI01_LocationCallouts.setGeolocation(Trigger.new, Trigger.oldMap);
            
         }
 
@@ -29,7 +32,11 @@ trigger TRG06_Signalement on Signalement__c(before insert, before update,after I
     if (Trigger.isAfter) {
 
         // AFTER INSERT EVENT **************************************************
-        if (Trigger.isInsert) { }
+        if (Trigger.isInsert) { 
+            
+            //Set Geolocation for Enquete
+        	UTI01_LocationCallouts.setGeolocation(Trigger.new, Trigger.oldMap);
+        }
         // AFTER UPDATE EVENT **************************************************
         if (Trigger.isUpdate) { }
 

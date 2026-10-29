@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Habilitation_Enquete__c</fullName>
     <description>Niveau d&apos;habilitation pour gérer une enquête</description>
-    <externalId>false</externalId>
     <label>Enquête</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

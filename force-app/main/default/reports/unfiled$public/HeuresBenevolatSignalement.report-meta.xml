@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Heures de bénévolat pour traiter les signalements qui n&apos;ont pas donné lieu à une enquête</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Heures de bénévolat signalements</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <description>Calcul des heures de bénévolat pour les signalements n&apos;ayant pas donné lieu à une enquête</description>
+    <filter>
+        <criteriaItems>
+            <column>Signalement__c.Issue__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Clôture par la CAT,Sans suite,Transmis à la CAT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Signalement__c.DateReceptionCERFA__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:365</value>
+        </criteriaItems>
+        <language>fr</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Signalement__c.HeuresBenevolat__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Heures de bénévolat Signalements en 1 an</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Signalement__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Signalement__c.DateAppelMairie__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

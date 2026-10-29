@@ -1,0 +1,12 @@
+<template>
+      <template if:true={mapMarkers}>
+        <lightning-map
+            map-markers={mapMarkers}
+            markers-title={markersTitle}
+            center={center}
+            show-footer={showFooter}
+            list-view="hidden"
+            zoom-level={zoomLevel}>
+        </lightning-map>
+      </template>
+</template>

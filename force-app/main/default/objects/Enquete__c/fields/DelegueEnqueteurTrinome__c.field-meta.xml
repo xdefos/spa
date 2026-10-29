@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DelegueEnqueteurTrinome__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Délégué Enquêteur trinôme</label>
     <referenceTo>DelegueEnqueteur__c</referenceTo>
     <relationshipLabel>Enquêtes SPA (Délégué Enquêteur Trinôme)</relationshipLabel>

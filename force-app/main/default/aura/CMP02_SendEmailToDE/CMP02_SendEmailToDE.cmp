@@ -1,0 +1,25 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="CMP02_SendEmailToDEController">
+
+	
+	<!-- attributes -->
+    <aura:attribute name="emails" type="String"/>
+    <aura:attribute name="emailsCmd" type="String"/> 
+
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.sendEmail }"/>
+
+    <div aura:id='divEmails'>
+    	<br/>
+    	<b>Liste des emails DE actifs :</b><br/><br/> {!v.emails}
+    	<br/><br/> 
+    
+    <aura:if isTrue="{!not(empty(v.emails))}" >
+    	<a class="slds-button slds-button_brand" href="{! 'mailto:'+ v.emails}" >Email aux DE</a>
+	</aura:if>
+    
+    
+    </div>
+
+
+
+</aura:component>

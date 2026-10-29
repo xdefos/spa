@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OrigineSignalement__c</fullName>
     <description>Indique le service à l&apos;origine du signalement</description>
-    <externalId>false</externalId>
     <inlineHelpText>Ce champ est calculé à partir de l&apos;objet Signalement</inlineHelpText>
     <label>Origine et suivi du signalement</label>
     <required>false</required>

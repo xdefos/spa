@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#EB641A</headerColor>
+        <logo>Sirius2_texte_PI_toiles</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>Gestion des enquêtes, des cessions des animaux et les visites post-adoptions par la Maison SPA de Bordeaux</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Investigations SPA</label>
+    <navType>Standard</navType>
+    <setupExperience>all</setupExperience>
+    <tabs>standard-home</tabs>
+    <tabs>Enquete__c</tabs>
+    <tabs>Animal__c</tabs>
+    <tabs>VisitePostAdoption__c</tabs>
+    <tabs>GoogleMap</tabs>
+    <tabs>DelegueEnqueteur__c</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>ContactLocal__c</tabs>
+    <tabs>Acteur__c</tabs>
+    <tabs>Signalement__c</tabs>
+    <tabs>standard-AppLauncher</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Gestion_des_Enqu_tes_UtilityBar</utilityBar>
+</CustomApplication>

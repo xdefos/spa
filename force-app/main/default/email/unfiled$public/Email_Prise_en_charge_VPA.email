@@ -1,0 +1,8 @@
+Bonjour,
+
+La Visite Post-Adoption {!VisitePostAdoption__c.Name}
+concernant {!VisitePostAdoption__c.NomAnimal__c}
+en provenance de {!VisitePostAdoption__c.RefugeOrigine__c}
+a été prise en charge par {!VisitePostAdoption__c.DelegueEnqueteurVPA__c}.
+
+Merci de lui envoyer le dossier.

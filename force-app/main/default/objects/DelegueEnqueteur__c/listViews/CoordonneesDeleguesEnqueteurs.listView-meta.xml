@@ -3,7 +3,6 @@
     <fullName>CoordonneesDeleguesEnqueteurs</fullName>
     <columns>NAME</columns>
     <columns>Habilitation_Enquete__c</columns>
-    <columns>Habilitation_VPA__c</columns>
     <columns>Telephone__c</columns>
     <columns>Email__c</columns>
     <columns>CodePostal__c</columns>
@@ -13,6 +12,10 @@
         <field>AncienDE__c</field>
         <operation>equals</operation>
         <value>0</value>
+    </filters>
+    <filters>
+        <field>Habilitation_Enquete__c</field>
+        <operation>notEqual</operation>
     </filters>
     <label>Coordonnées des Délégués Enquêteurs</label>
 </ListView>

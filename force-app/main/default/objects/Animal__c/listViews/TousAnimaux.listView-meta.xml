@@ -8,5 +8,10 @@
     <columns>Enquete__c</columns>
     <columns>Commentaires__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>TypeCession__c</field>
+        <operation>equals</operation>
+        <value>Cession à une association</value>
+    </filters>
     <label>Toutes les cessions d&apos;animaux</label>
 </ListView>

@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>Bonjour</i> 
+    <br /> &#xa0; 
+    <br /> 
+    <i>Une nouvelle enquête vient d'être créée proche&#xa0;de chez toi.</i> 
+    <br /> 
+    <i>Il s'agit de l'enquête&#xa0;{{{Enquete__c.Name}}} dont les faits se déroulent&#xa0; : 
+     <br /> {{{Enquete__c.Adresse__c}}} 
+     <br /> {{{Enquete__c.CodePostal__c}}}&#xa0;{{{Enquete__c.Ville__c}}}</i> 
+    <br /> &#xa0; 
+    <br /> 
+    <i>Merci d'examiner ce dossier et de te positionner dans Sirius si tu acceptes de le prendre en charge</i></span></span>
+  <br />
+  &#xa0;
+  <div id="" style="left: 8px; top: 170px;">
+   <img alt="Sirius2_texte_PI_toiles" src="{[devName:Sirius2_texte_PI_toiles1]}" style="max-width: 916.26px; width: 154px; height: 114px;" title="Sirius2_texte_PI_toiles" />
+  </div>
+  <div id="" style="left: 8px; top: 170px;">&#xa0;</div>
+  <div id="" style="left: 8px; top: 170px;">&#xa0;</div>
+  <div id="" style="left: 8px; top: 170px;">&#xa0;</div>
+  <div id="" style="left: 8px; top: 170px;">&#xa0;</div>
+  <div id="" style="left: 8px; top: 152px;">&#xa0;</div>
+  <div id="" style="left: 8px; top: 152px;">&#xa0;</div>
+ </body>
+</html>

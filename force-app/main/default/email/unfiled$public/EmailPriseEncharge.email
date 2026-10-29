@@ -1,0 +1,6 @@
+Bonjour,
+
+L'enquête {!Enquete__c.Name}
+a été prise en charge par {!Enquete__c.DelegueEnqueteurReferent__c}.
+
+Merci de lui envoyer le dossier.

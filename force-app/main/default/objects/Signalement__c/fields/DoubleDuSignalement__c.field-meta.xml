@@ -3,7 +3,6 @@
     <fullName>DoubleDuSignalement__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Associe un signalement à un signalement principal en tant que doublon</description>
-    <externalId>false</externalId>
     <inlineHelpText>Indiquer le signalement principal dont celui-ci fait doublon</inlineHelpText>
     <label>Double du signalement principal</label>
     <referenceTo>Signalement__c</referenceTo>

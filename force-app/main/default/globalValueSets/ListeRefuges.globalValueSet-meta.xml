@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Maison SPA de Bordeaux</fullName>
+        <default>false</default>
+        <label>Maison SPA de Bordeaux</label>
+    </customValue>
+    <customValue>
+        <fullName>Maison SPA de Niort</fullName>
+        <default>false</default>
+        <label>Maison SPA de Niort</label>
+    </customValue>
+    <customValue>
+        <fullName>Maison SPA de Tourcoing</fullName>
+        <default>false</default>
+        <label>Maison SPA de Tourcoing</label>
+    </customValue>
+    <customValue>
+        <fullName>Maison SPA de Nice</fullName>
+        <default>false</default>
+        <label>Maison SPA de Nice</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Saint-Pierre-du-Mont</fullName>
+        <default>false</default>
+        <label>Refuge de Saint-Pierre-du-Mont</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Compiègne</fullName>
+        <default>false</default>
+        <label>Refuge de Compiègne</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Plaisir</fullName>
+        <default>false</default>
+        <label>Refuge de Plaisir</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de La Roche-sur-Yon</fullName>
+        <default>false</default>
+        <label>Refuge de La Roche-sur-Yon</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge d&apos;Hermeray</fullName>
+        <default>false</default>
+        <label>Refuge d&apos;Hermeray</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Chilleurs-aux-Bois</fullName>
+        <default>false</default>
+        <label>Refuge de Chilleurs-aux-Bois</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Mirepoix</fullName>
+        <default>false</default>
+        <label>Refuge de Mirepoix</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Luynes</fullName>
+        <default>false</default>
+        <label>Refuge de Luynes</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Chamarande</fullName>
+        <default>false</default>
+        <label>Refuge de Chamarande</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge des Deux Rives Golfech</fullName>
+        <default>false</default>
+        <label>Refuge des Deux Rives Golfech</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge d&apos;Orgeval</fullName>
+        <default>false</default>
+        <label>Refuge d&apos;Orgeval</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Toreilles</fullName>
+        <default>false</default>
+        <label>Refuge de Toreilles</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Vaux-le-Pénil</fullName>
+        <default>false</default>
+        <label>Refuge de Vaux-le-Pénil</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Cabourg</fullName>
+        <default>false</default>
+        <label>Refuge de Cabourg</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Quimper</fullName>
+        <default>false</default>
+        <label>Refuge de Quimper</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Gennevilliers</fullName>
+        <default>false</default>
+        <label>Refuge de Gennevilliers</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Rennes</fullName>
+        <default>false</default>
+        <label>Refuge de Rennes</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Flayosc</fullName>
+        <default>false</default>
+        <label>Refuge de Flayosc</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Bouguenais</fullName>
+        <default>false</default>
+        <label>Refuge de Bouguenais</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Pornic</fullName>
+        <default>false</default>
+        <label>Refuge de Pornic</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge CAP de Perpignan</fullName>
+        <default>false</default>
+        <label>Refuge CAP de Perpignan</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Vallerargues</fullName>
+        <default>false</default>
+        <label>Refuge de Vallerargues</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge d&apos;Inzinzac</fullName>
+        <default>false</default>
+        <label>Refuge d&apos;Inzinzac</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Port-la-Nouvelle</fullName>
+        <default>false</default>
+        <label>Refuge de Port-la-Nouvelle</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Châteaubourg</fullName>
+        <default>false</default>
+        <label>Refuge de Châteaubourg</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Lyon-Marennes</fullName>
+        <default>false</default>
+        <label>Refuge de Lyon-Marennes</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge La Rochette - Chameyrat</fullName>
+        <default>false</default>
+        <label>Refuge La Rochette - Chameyrat</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Brugheas</fullName>
+        <default>false</default>
+        <label>Refuge de Brugheas</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Redon</fullName>
+        <default>false</default>
+        <label>Refuge de Redon</label>
+    </customValue>
+    <customValue>
+        <fullName>Refuge de Sarreguemines</fullName>
+        <default>false</default>
+        <label>Refuge de Sarreguemines</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand Refuge SPA</fullName>
+        <default>false</default>
+        <label>Grand Refuge SPA</label>
+    </customValue>
+    <customValue>
+        <fullName>Dispensaire de Toulouse</fullName>
+        <default>false</default>
+        <label>Dispensaire de Toulouse</label>
+    </customValue>
+    <customValue>
+        <fullName>Siège</fullName>
+        <default>false</default>
+        <label>Siège</label>
+    </customValue>
+    <description>Liste des refuges utilisables dans l&apos;objet &quot;VPA&quot;</description>
+    <masterLabel>Liste Refuges</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

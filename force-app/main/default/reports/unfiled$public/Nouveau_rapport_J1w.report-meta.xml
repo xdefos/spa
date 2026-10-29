@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Acteur__c.ActeurContactLocal__r$Name</field>
+    </columns>
+    <columns>
+        <field>Acteur__c.ActeurContactLocal__r$Coordonnees__c</field>
+    </columns>
+    <columns>
+        <field>Acteur__c.ActeurContactLocal__r$ImplantationLocale__c</field>
+    </columns>
+    <description>Coordonnées de nos contacts pouvant être filtrés par type d&apos;acteur</description>
+    <filter>
+        <criteriaItems>
+            <column>Acteur__c$TypeActeur__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Association protection animale</value>
+        </criteriaItems>
+        <language>fr</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Acteur__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Acteur__c$Role__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Acteur__c$OrganisationTerritoriale__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Coordonnées de nos Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CoordonneesContactsAssociatifs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Acteur__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

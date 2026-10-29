@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DatePassagePrevisionnel__c</fullName>
-    <externalId>false</externalId>
     <formula>DateAdoption__c  + ( ( 365 / 12 ) * 6 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Date de passage à prévoir</label>

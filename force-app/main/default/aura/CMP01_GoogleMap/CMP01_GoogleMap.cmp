@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="CMP01_GoogleMapController" >
+    
+    <!-- attributes -->
+    <aura:attribute name="recordId" type="String" default="{!v.recordId}"/> 
+    <aura:attribute name="mapMarkers" type="Object" />
+    <aura:attribute name="center" type="Object" />
+    <aura:attribute name="zoomLevel" type="Integer" default="7" />
+    <aura:attribute name="markersTitle" type="String"  default="Google Maps"/>
+    <aura:attribute name="showFooter" type="Boolean" default="false" />
+    <aura:attribute name="listView" type="String" default="hidden"/>
+    
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <!-- the map component -->
+    <div> 
+      <aura:if isTrue="{!v.mapMarkers.length > 0}" >
+        <lightning:map class="myMap"
+                     mapMarkers="{!v.mapMarkers}"
+                     center="{! v.center }"
+                     zoomLevel="{! v.zoomLevel }"
+                     markersTitle="{! v.markersTitle }"
+                     showFooter="{ !v.showFooter }"
+                     listView="{!v.listView}" >
+        </lightning:map> 
+      </aura:if>
+    </div>  
+</aura:component>

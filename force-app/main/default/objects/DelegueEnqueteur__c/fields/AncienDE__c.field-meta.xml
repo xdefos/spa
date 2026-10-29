@@ -3,7 +3,6 @@
     <fullName>AncienDE__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Indique que le DE ne travaille plus pour la SPA</description>
-    <externalId>false</externalId>
     <label>Ancien DE</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

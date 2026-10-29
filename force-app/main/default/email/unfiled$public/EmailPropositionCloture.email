@@ -1,0 +1,6 @@
+Bonjour,
+
+L'enquête {!Enquete__c.Name}
+a été proposée à la clôture par {!Enquete__c.DelegueEnqueteurReferent__c}.
+
+Merci d'examiner la clôture.
